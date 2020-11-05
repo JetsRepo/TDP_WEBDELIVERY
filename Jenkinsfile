@@ -57,11 +57,11 @@ pipeline {
 
             }
       }
-        stage('Archive Results WORD') {
+      /*  stage('Archive Results WORD') {
             steps {
             archiveArtifacts 'target/resultado/*.docx'
             }
-      }
+      }*/
        stage('Archive Results IMG') {
              steps {
       		 archiveArtifacts 'target/resultado/img/**/*.*'
