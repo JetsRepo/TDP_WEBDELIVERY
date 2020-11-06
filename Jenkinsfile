@@ -89,11 +89,19 @@ pipeline {
             }
       }
     }
-    post {
+
+     stage('Send E-mail') {
+                steps {
+                always{
+                        emailtext body: 'A Test EMail', recipientProviders:[[$class:'DevelopersRecipientProvider'],[$class:'RequesterRecipientProvider']], subject:'Test'
+                         }
+          }
+        }
+  /*  post {
         always{
         emailtext body: 'A Test EMail', recipientProviders:[[$class:'DevelopersRecipientProvider'],[$class:'RequesterRecipientProvider']], subject:'Test'
          }
-    }
+    }*/
 
 
 }
