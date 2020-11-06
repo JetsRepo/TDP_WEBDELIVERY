@@ -1,7 +1,7 @@
 pipeline {
 
     agent {
-        node { label 'master'}
+        node { label 'Jets_PC'}
     }
      parameters {
       string(name: 'TEST_TAG', defaultValue: 'mvn test -Dcucumber.options="--tags @InputYourTAG', description: 'Enter the Tag of your Test, just change the TAG in this line')
